@@ -73,7 +73,7 @@ color: #f65282;
  display: flex;   
 }
 .weather-app-icon {
- font-size: 44px;   
+ font-size: 80px;   
  margin-top: 22px;
 }
 
@@ -85,7 +85,8 @@ color: #f65282;
 }
 
 .weather-app-unit {
-   margin-top: 30px; 
+   margin-top: 16px; 
+   font-size: 28px;
 }
 
 footer{
