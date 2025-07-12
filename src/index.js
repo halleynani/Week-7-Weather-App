@@ -2,8 +2,20 @@ function refreshWeather(response) {
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
     let cityElement = document.querySelector("#city");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let timeElement = document.querySelector("#time");
+    let date = new Date(response.data.time * 1000);
+    let iconElement = document.querySelector("#icon");
+
+
+
   
     cityElement.innerHTML = response.data.city;
+    timeElement.innerHTML = formatDate(date);
+    descriptionElement.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+    windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     temperatureElement.innerHTML = Math.round(temperature);
   }
 
@@ -20,7 +32,15 @@ function handleSearchSubmit(event) {
     cityElement.innerHTML = searchInput.value;
     searchCity(searchInput.value);
   }
+
+  function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   
+    return days[date.getDay()];
+  }
+
+
   let searchFormElement = document.querySelector("#search-form");
   searchFormElement.addEventListener("submit", handleSearchSubmit);
 

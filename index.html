@@ -26,21 +26,23 @@
         </header>
         <main>
             <div class="weather-app-data">
-            <div>
-            <h1 class="weather-app-city" id="city">Houston</h1>
-            <p class="weather-app-details">
-                Wednesday 8:30PM, Mostly Cloudy
-                <br />
-               Humidity: <strong>77%</strong>, Wind: <strong>1 mph</strong>
-            </p>
-        </div>
-        <div class="weather-app-temperature-container">
-            <div class="weather-app-icon">☁️ </div>
-            <div class="weather-app-temperature" id="temperature">77</div> 
-                <div class="weather-app-unit">°F</div>
-    </div>
-    </div>
-        </main>
+                <div>
+                  <h1 class="weather-app-city" id="city"></h1>
+                  <p class="weather-app-details">
+                    <span id="time"></span>,
+                    <span id="description"></span>
+                    <br />
+                    Humidity: <strong id="humidity"></strong>, Wind:
+                    <strong id="wind-speed"></strong>
+                  </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                  <div id="icon"></div>
+                  <div class="weather-app-temperature" id="temperature"></div>
+                  <div class="weather-app-unit">°F</div>
+                </div>
+              </div>
+              <div class="weather-forecast" id="forecast"></div>
 
       </main>
     <footer>This project was coded by
